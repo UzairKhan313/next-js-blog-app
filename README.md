@@ -1,34 +1,78 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Blog Website Project
 
-## Getting Started
+This is a full-featured blog website built with Next.js and MongoDB. The project includes several key functionalities, such as featured blog posts, individual blog pages with inline images and code snippets, and a contact form that stores submissions in a MongoDB database.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Usage](#usage)
+- [API Routes](#api-routes)
+- [Contact](#contact)
+
+## Features
+
+- **Starting Page:** The website includes a homepage that displays featured blog posts.
+- **Featured Posts:** As the owner, you can decide which blog posts should be featured on the homepage.
+- **All Blog Posts Page:** A dedicated page listing all blog posts available on the website.
+- **Individual Blog Pages:** Users can read individual blog posts with support for inline images and code snippets, which are rendered in a visually appealing way.
+- **Markdown Support:** Blog posts are written in Markdown and stored as Markdown files. These are then rendered as HTML.
+- **Contact Page:** A contact form allows visitors to send messages. The form submissions are stored in a MongoDB database using an API route.
+
+## Technologies Used
+
+- **Next.js:** A React framework for server-side rendering and static site generation.
+- **MongoDB:** A NoSQL database used to store contact form submissions.
+- **Markdown:** Used for writing and storing blog posts in a structured format.
+- **CSS:** Styling for the blog, with a focus on responsiveness and accessibility.
+
+## Project Structure
+
+```plaintext
+├── public
+│   ├── images
+│   └── ...
+├── pages
+│   ├── api
+│   │   └── contact.js
+│   ├── index.js
+│   ├── blogs
+│   │   └── [slug].js
+│   ├── all-posts.js
+│   └── contact.js
+├── posts
+│   └── sample-post.md
+├── components
+│   ├── Layout.js
+│   ├── Header.js
+│   ├── Footer.js
+│   └── ...
+├── styles
+│   └── globals.css
+└── ...
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## To Start with this project.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+    bash```
+    git clone https://github.com/UzairKhan313/next-js-blog-app.git
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+    cd next-js-blog-app
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+    ```
 
-## Learn More
+## Install all the dependencies.
 
-To learn more about Next.js, take a look at the following resources:
+    bash```
+    npm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Run the development server.
 
-## Deploy on Vercel
+    bash```
+    npm run dev
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    ```
