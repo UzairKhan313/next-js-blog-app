@@ -1,7 +1,18 @@
-import React from "react";
+import AllPosts from "../../components/posts/AllPosts";
+import { getAllPost } from "../../utils/post-utils";
 
-const AllPostsPage = () => {
-  return <div>All Posts</div>;
+const AllPostsPage = ({ posts }) => {
+  return <AllPosts posts={posts} />;
 };
 
 export default AllPostsPage;
+
+export const getStaticProps = () => {
+  const posts = getAllPost();
+  return {
+    props: {
+      posts,
+    },
+    revalidate: 600,
+  };
+};
