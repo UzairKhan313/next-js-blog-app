@@ -1,9 +1,18 @@
-import React from "react";
+import Head from "next/head";
+import React, { Fragment } from "react";
 import PostContent from "../../components/posts/post-detail/post-content";
 import { getAllPostFiles, getPostData } from "../../utils/post-utils";
 
 const PostDetailsPage = ({ post }) => {
-  return <PostContent post={post} />;
+  return (
+    <Fragment>
+      <Head>
+        <title>{post.title}</title>
+        <meta name="description" content={post.excerpt} />
+      </Head>
+      <PostContent post={post} />;
+    </Fragment>
+  );
 };
 
 export default PostDetailsPage;

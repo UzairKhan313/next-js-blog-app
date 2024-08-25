@@ -16,8 +16,8 @@ const Hero = () => {
       </div>
       <h1>Hi, I'm Uzair</h1>
       <p>
-        I blog about web development - especially MERN stack development and
-        Next js
+        I write blog posts about web development - especially MERN stack
+        development and Next js
       </p>
     </section>
   );
