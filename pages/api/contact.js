@@ -22,10 +22,10 @@ async function handler(req, res) {
     };
 
     let client;
+
+    const connectionString = `${process.env.mongodb_url}/${process.env.data_base}`;
     try {
-      client = await MongoClient.connect(
-        "mongodb://localhost:27017/nextjs-event-comments"
-      );
+      client = await MongoClient.connect(connectionString);
     } catch (error) {
       res.status(500).json({ message: "Falid to connect to the database." });
       return null;

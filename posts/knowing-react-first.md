@@ -28,7 +28,7 @@ Let's dive into some basic concepts by creating a simple React component.
 
 First, you'll need to set up a React environment. You can do this using Create React App, a tool that sets up everything you need to build a React application.
 
-```bash
+```js
 npx create-react-app my-react-app
 cd my-react-app
 npm start
